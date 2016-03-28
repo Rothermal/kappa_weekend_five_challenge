@@ -9,7 +9,7 @@
 
 
 
-<div ng-repeat="pet in pets | orderBy : myFilter : reverse">
+<div ng-repeat="pet in pets.object | orderBy : myFilter : reverse">
 <div class="well">
     <p>{{pet.name}}</p>
     <p>{{pet.animal}}</p>

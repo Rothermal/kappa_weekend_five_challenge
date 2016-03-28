@@ -3,5 +3,5 @@
  */
 myApp.controller('HomeController',['$scope','PetService',function($scope,PetService){
     $scope.title = "This is the Home Controller";
-    PetService.getData();
+    //PetService.getData();
 }]);
