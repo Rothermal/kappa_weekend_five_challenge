@@ -23,11 +23,11 @@ myApp.controller('PetListController',['$scope','PetService',function($scope,PetS
     $scope.removePet = function (id){
 
         PetService.removeData(id);
-        //for(var i = 0; i < $scope.pets.length;i++) {
-        //    if($scope.pets[i]._id === id ) {
-        //        $scope.pets.splice(i, 1);
-        //    }
-        //}
+        for(var i = 0; i < $scope.pets.length;i++) {
+            if($scope.pets[i]._id === id ) {
+                $scope.pets.splice(i, 1);
+            }
+        }
 
     };
 
