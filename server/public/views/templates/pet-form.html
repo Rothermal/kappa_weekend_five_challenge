@@ -1,0 +1,42 @@
+<h1> {{title}}</h1>
+<p>{{test}}</p>
+
+<form>
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="pet-name" class="form-control-label">Pet Name : </label>
+            <input type="text" id="pet-name" class="form-control pet-form col-sm-2"
+           ng-model="pet.name" required placeholder="insert name">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="pet-type" class="form-control-label">Pet Type : </label>
+            <input type="text" id="pet-type" class="form-control pet-form col-sm-2"
+                   ng-model="pet.type" placeholder="what kind of animal is it anyways?" >
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="pet-age" class="form-control-label">Pet Age : </label>
+            <input type="number" id="pet-age" class="form-control pet-form col-sm-2"
+               ng-model="pet.age" placeholder="how old is this animal">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-md-6">
+            <label for="pet-image" class="form-control-label">Image Url : </label>
+            <input type="text" id="pet-image" class="form-control pet-form col-sm-2"
+           ng-model="pet.image" placeholder="www.do_you_even_Url">
+        </div>
+    </div>
+
+    <div class="form-group row">
+    <input type="submit"  class="btn-success" ng-click="postPets(pet)">
+    </div>
+
+</form>
+

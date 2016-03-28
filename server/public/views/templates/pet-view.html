@@ -1,0 +1,20 @@
+<div class="container"></div>
+<h1 class="text-center"> {{title}}</h1>
+<p class="text-center">{{test}}</p>
+<p class="text-center"> pet view </p>
+<button ng-click="myFilter = 'name'; sort()"  >Sort by Name</button>
+<button ng-click="myFilter = 'age'; sort() ">Sort by Age</button>
+<button ng-click="myFilter = 'animal'; sort() ">Sort by Animal</button>
+<button ng-click="myFilter = null; reverse = false">Remove sort filters</button>
+
+
+
+<div ng-repeat="pet in pets | orderBy : myFilter : reverse">
+<div class="well">
+    <p>{{pet.name}}</p>
+    <p>{{pet.animal}}</p>
+    <p>{{pet.age}}</p>
+    <img class="img-responsive img-rounded" ng-src='{{pet.image}}'>
+    <button class="btn btn-danger" ng-click="removePet(pet._id);">Delete Pet</button>
+</div>
+</div>

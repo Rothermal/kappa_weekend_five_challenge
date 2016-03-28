@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>PET FINDER THINGYS WEEK 5</title>
+    <link rel="shortcut icon" href="/assets/images/KappacatBlue.png">
+    <!--scripts-->
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular-route/angular-route.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+    <script src="assets/scripts/services/petService.js"></script>
+    <script src="assets/scripts/controllers/formController.js"></script>
+    <script src="assets/scripts/controllers/homeController.js"></script>
+    <script src="assets/scripts/controllers/mainController.js"></script>
+    <script src="assets/scripts/controllers/petListController.js"></script>
+    <!--style-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <base href="/">
+</head>
+<body ng-controller="MainController">
+    <h1 class="text-center"> {{ title }}</h1>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/petform"> Add Some Pets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/petlist">Look at the Pets</a>
+            </li>
+        </ul>
+        </nav>
+            <!--<nav class="navbar navbar-dark">-->
+                <!--<a class="nav-link" href="/home" >Home</a>-->
+                <!--<a  class="nav-link" href="/petform" >Add some Pets</a>-->
+                <!--<a  class="nav-link" href="/petlist" >Show me the PETS</a>-->
+            <!--</nav>-->
+
+    </div>
+
+    <main ng-view class="container"></main>
+</body>
+</html>
